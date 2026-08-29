@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-orange: #ff5722;
+    --brand-dark-orange: #b02f00;
+    --brand-charcoal: #1c1b1b;
+    --brand-surface: #fdf8f8;
+    --brand-surface-low: #f7f3f2;
+    --brand-surface-card: rgba(255, 255, 255, 0.75);
+    --brand-border: rgba(116, 120, 120, 0.25);
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glass-panel-dark {
+  background: rgba(24, 23, 22, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glowing-btn {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glowing-btn:hover {
+  box-shadow: 0 0 24px rgba(255, 87, 34, 0.45);
+  background-color: #ff5722;
+  color: #ffffff;
+  border-color: #ff5722;
+}
+
+.glowing-card {
+  transition: all 0.3s ease;
+}
+
+.glowing-card:hover {
+  box-shadow: 0 10px 30px -10px rgba(255, 87, 34, 0.25);
+  border-color: rgba(255, 87, 34, 0.4);
+}
+
+/* Custom horizontal scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

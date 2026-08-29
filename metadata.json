@@ -1,0 +1,6 @@
+{
+  "name": "CONSTRUKTIQ",
+  "description": "Precision Construction & Intelligent Design platform featuring architectural 3D simulations, interactive portfolio, process walkthrough, materials library, and dynamic estimate calculator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
