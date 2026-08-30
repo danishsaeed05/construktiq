@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
+import { AboutSection } from './components/AboutSection';
 import { CapabilitiesSection } from './components/CapabilitiesSection';
 import { FeaturedProjectsSection } from './components/FeaturedProjectsSection';
 import { EstimateHubSection } from './components/EstimateHubSection';
@@ -18,7 +19,7 @@ export default function App() {
 
   // IntersectionObserver to sync active nav link with scroll position
   useEffect(() => {
-    const sections = ['hero', 'capabilities', 'projects', 'estimate'];
+    const sections = ['hero', 'about', 'capabilities', 'projects', 'estimate'];
     const handleScroll = () => {
       const scrollPos = window.scrollY + 200;
       for (const sectionId of sections) {
@@ -82,12 +83,15 @@ export default function App() {
           onGetEstimate={() => scrollToSection('estimate')}
         />
 
-        {/* 2. Capabilities Horizontal Glass Strip */}
+        {/* 2. About Section */}
+        <AboutSection />
+
+        {/* 3. Capabilities Horizontal Glass Strip */}
         <CapabilitiesSection
           onRequestQuoteForCategory={handleRequestQuoteForCategory}
         />
 
-        {/* 3. Featured Work Masonry Gallery */}
+        {/* 4. Featured Work Masonry Gallery */}
         <FeaturedProjectsSection
           onSelectProject={(proj) => setSelectedProject(proj)}
           onOpenEstimate={() => scrollToSection('estimate')}

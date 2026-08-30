@@ -15,6 +15,7 @@ export const BottomMobileNav: React.FC<BottomMobileNavProps> = ({
   onOpenContact
 }) => {
   const items = [
+    { id: 'about', label: 'About', icon: Layers },
     { id: 'capabilities', label: 'Capabilities', icon: Layers },
     { id: 'projects', label: 'Portfolio', icon: LayoutGrid },
     { id: 'estimate', label: 'Estimate', icon: Calculator },
