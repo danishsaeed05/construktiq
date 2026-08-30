@@ -1,0 +1,120 @@
+[
+  {
+    "id": "apex-residence",
+    "title": "Apex Residence",
+    "category": "RESIDENTIAL",
+    "categoryLabel": "Residential",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuByIRzjtk35dk3HwRLK8PamSRSvZbzTIjQDepGm_MbiA-M99G1WAyBZ0hcWeFWkN6uBDqQtWRK0WhXhsnVgLwytD8RunZDMwiquH2F7wcB_kYTntG3phtqEx78f1MblCl1HAkOjdofbsX8k1GjerbTFqGBIeo4BGTaRKvObOi-EBNpglzCUvr0z7PTiHS1v4LAx2G8hSf9sV0f9KK7_2ZpNmGjnXiTzKBODS-WfPZULLBd4f6Ev_uE",
+    "additionalImages": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "location": "Aspen Highlands, CO",
+    "year": "2024",
+    "area": "6,850 sq ft",
+    "leadArchitect": "E. Vance, AIA",
+    "tagline": "Ultra-refined minimalist alpine retreat with continuous Calacatta marble waterfall surfaces.",
+    "description": "The Apex Residence balances raw architectural honesty with delicate modern domesticity. Highlighting a bespoke bookmatched Calacatta marble island, fluted white oak millwork, and full-height thermal architectural glazing facing alpine panoramas.",
+    "materials": [
+      "Calacatta Viola Marble",
+      "White Rift Oak",
+      "Brushed Matte Brass",
+      "Recessed Trimless LED"
+    ],
+    "keyFeatures": [
+      "Monolithic island with hidden integrated induction",
+      "Concealed automated butler pantry",
+      "Passivhaus certified thermal envelope"
+    ],
+    "budgetTier": "$2.5M - $4.0M",
+    "status": "Completed"
+  },
+  {
+    "id": "desert-concrete-pavilion",
+    "title": "Desert Concrete Pavilion",
+    "category": "ARCHITECTURE",
+    "categoryLabel": "Architecture",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAyWG97tigDOcs0297b-Y06thibF199-QgtG3_k6Yw2bxMuoINjosqS_nhZNFY3VPLl5xn5slEspW3nN0GQo2kJDshn-kiTT0xOJg3AauT4zOhSJstekNTI8sLLnEsSCCOnDqhLYsWC_gYWGjXPRYsnw5y5K0na5W8fFE-BmUzU3zAhTKcHxobnSrZC5rTEVNL8oGLAQzhESXg6o4qsF4Zx_xjiIgI23RA78Jw6OHDcpSm4aWz5ve0",
+    "additionalImages": [
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d0fbb18f15f7?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "location": "Scottsdale Foothills, AZ",
+    "year": "2023",
+    "area": "9,400 sq ft",
+    "leadArchitect": "K. Thorne & Partners",
+    "tagline": "Board-formed cantilevered architectural concrete meeting zero-edge reflecting waters.",
+    "description": "Forged directly into desert bedrock, the Desert Concrete Pavilion exemplifies our heavy concrete engineering capability. Mass cast-in-place cantilevered roof planes shade floor-to-ceiling ultra-clear glass, creating seamless indoor-outdoor desert continuity.",
+    "materials": [
+      "Board-Formed Architectural Concrete",
+      "Structural Blackened Steel",
+      "Low-E Acoustic Glazing",
+      "Basalt Stone Pavers"
+    ],
+    "keyFeatures": [
+      "14-foot continuous cantilever without structural columns",
+      "Mirror-edge passive cooling water basin",
+      "Subterranean geothermal climate moderation"
+    ],
+    "budgetTier": "$5.0M+",
+    "status": "Completed"
+  },
+  {
+    "id": "the-foundry-hub",
+    "title": "The Foundry Hub",
+    "category": "COMMERCIAL",
+    "categoryLabel": "Commercial",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuB36ih_VFLujhe7hbRZyZGISFOmtvmWT3QH1CE-17ePlS7luyaLz9rzs0znJaZ-QU0gX1YCEZxU01smzQ6zt83jKTKHr8J9BR3gsAo7CKvsWp30SWOtyD6F19oCCqvJWVFYOeosXcVKENXlsuTJOKsQTz4p94Y1kBkaB-wMrwkj27pwRGzKGjCMYZhnNsM9yBcRUPms4S2OWpF-ldZt69eerUklht7XVvXEFaHyHIaFKtvhm6rHbSY",
+    "additionalImages": [
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "location": "Fulton Market, Chicago, IL",
+    "year": "2024",
+    "area": "14,200 sq ft",
+    "leadArchitect": "CONSTRUKTIQ Studio",
+    "tagline": "Adaptive reuse of a historic 19th-century brick foundry into a multi-tier culinary & social venue.",
+    "description": "Transforming industrial masonry heritage into an avant-garde dining and hospitality experience. We preserved exposed brickwork and structural timber trusses while weaving in custom brass gantry bar systems, polished concrete floors, and smart acoustic insulation.",
+    "materials": [
+      "Historic Reclaimed Brick",
+      "Architectural Brass Gantry",
+      "Polished Concrete Slab",
+      "Saddle Leather Upholstery"
+    ],
+    "keyFeatures": [
+      "Multi-tier suspended brass liquor display with backlighting",
+      "Custom acoustic ceiling baffling integrated into joists",
+      "120-seat high-density dining optimization"
+    ],
+    "budgetTier": "$3.0M - $4.5M",
+    "status": "Completed"
+  },
+  {
+    "id": "lumina-glass-atrium",
+    "title": "Lumina Glass Atrium",
+    "category": "SPECIALIZED",
+    "categoryLabel": "Specialized",
+    "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+    "additionalImages": [
+      "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "location": "Seattle Waterfront, WA",
+    "year": "2025",
+    "area": "18,600 sq ft",
+    "leadArchitect": "M. Sterling, RIBA",
+    "tagline": "Curved structural diagrid glazing with integrated solar harvesting and automated microclimate.",
+    "description": "A state-of-the-art corporate innovation atrium utilizing lightweight titanium-steel diagrid trusses and electrochromic triple-glazed panels that adjust tint dynamically with solar intensity.",
+    "materials": [
+      "Titanium Diagrid Truss",
+      "Electrochromic Dynamic Glass",
+      "Terrazzo Composite Flooring",
+      "Acoustic Moss Walls"
+    ],
+    "keyFeatures": [
+      "Self-shading electrochromic intelligent envelope",
+      "Seismic Grade IV base-isolation foundation",
+      "Rainwater catchment supplying botanical interior"
+    ],
+    "budgetTier": "$7.5M+",
+    "status": "Under Construction"
+  }
+]
