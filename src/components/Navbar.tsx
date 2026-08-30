@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Compass, ArrowRight } from 'lucide-react';
 import { BRAND_CONFIG } from '../data/mockData';
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+
 interface NavbarProps {
   activeSection: string;
   onNavigate: (sectionId: string) => void;
@@ -53,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           className="flex items-center gap-3 text-left group transition-transform active:scale-95"
         >
           <img
-            src={BRAND_CONFIG.markLogoUrl || '/images/logo_only_without_text.svg'}
+            src={BRAND_CONFIG.markLogoUrl || `${baseUrl}images/logo_only_without_text.svg`}
             alt="CONSTRUKTIQ Logo"
             className="w-10 h-10 sm:w-11 sm:h-11 rounded-sm object-contain shadow-xs"
             onError={(e) => {

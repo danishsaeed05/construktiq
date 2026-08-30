@@ -2,6 +2,8 @@ import React from 'react';
 import { BRAND_CONFIG } from '../data/mockData';
 import { Sparkles, ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+
 interface FooterProps {
   onOpenContact: () => void;
   onOpenEstimate: () => void;
@@ -19,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, onOpenEstimate })
         <div className="sm:col-span-2 lg:col-span-1">
           <div className="flex items-center gap-3 mb-4">
             <img
-              src={BRAND_CONFIG.markLogoUrl || '/images/logo_only_without_text.svg'}
+              src={BRAND_CONFIG.markLogoUrl || `${baseUrl}images/logo_only_without_text.svg`}
               alt="CONSTRUKTIQ Logo"
               className="w-9 h-9 sm:w-10 sm:h-10 rounded-sm object-contain"
               onError={(e) => {

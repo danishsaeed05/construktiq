@@ -1,12 +1,14 @@
 import { Project, ServiceCapability, TimelineStep, ArchitecturalMaterial } from '../types';
 import projectsData from './projects.json';
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+
 export const BRAND_CONFIG = {
   name: 'CONSTRUKTIQ',
   tagline: 'Precision Construction & Intelligent Design',
   subtitle: 'Constructing the Future of Space formed with Purpose',
-  logoUrl: '/images/gemini-svg.svg',
-  markLogoUrl: '/images/logo_only_without_text.svg',
+  logoUrl: `${baseUrl}images/gemini-svg.svg`,
+  markLogoUrl: `${baseUrl}images/logo_only_without_text.svg`,
   phone: '+1 (800) 492-8821',
   email: 'inquiries@construktiq.build',
   address: {

@@ -1,6 +1,8 @@
 import { Project, ProjectCategory } from '../types';
 import fallbackProjects from '../data/projects.json';
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+
 let cachedProjects: Project[] | null = null;
 
 /**
@@ -9,7 +11,7 @@ let cachedProjects: Project[] | null = null;
  */
 export async function loadProjects(): Promise<Project[]> {
   try {
-    const response = await fetch('/data/projects.json', {
+    const response = await fetch(`${baseUrl}data/projects.json`, {
       headers: {
         'Cache-Control': 'no-cache',
         'Pragma': 'no-cache'

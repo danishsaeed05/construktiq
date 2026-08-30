@@ -12,13 +12,15 @@ export interface ConstructionVideoSource {
   description: string;
 }
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+
 export const TIMELAPSE_FEEDS: ConstructionVideoSource[] = [
   {
     id: 'construktiq-local-timelapse',
     name: 'CONSTRUKTIQ Construction Timelapse',
     location: 'Site Operations • Structural Progression',
     type: 'mp4',
-    mp4Url: '/images/timelapse_video.mp4',
+    mp4Url: `${baseUrl}images/timelapse_video.mp4`,
     poster: 'https://images.unsplash.com/photo-1541888946425-d0fbb18f15f7?auto=format&fit=crop&w=2000&q=80',
     description: 'Local construction sequence used as the hero background video'
   },
