@@ -6,7 +6,6 @@ import { CapabilitiesSection } from './components/CapabilitiesSection';
 import { FeaturedProjectsSection } from './components/FeaturedProjectsSection';
 import { EstimateHubSection } from './components/EstimateHubSection';
 import { ProjectDetailModal } from './components/ProjectDetailModal';
-import { ContactDrawer } from './components/ContactDrawer';
 import { BottomMobileNav } from './components/BottomMobileNav';
 import { Footer } from './components/Footer';
 import { Project } from './types';
@@ -14,7 +13,6 @@ import { Project } from './types';
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>('hero');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [contactOpen, setContactOpen] = useState<boolean>(false);
   const [estimateProjectType, setEstimateProjectType] = useState<'Residential' | 'Commercial' | 'Renovation' | 'Specialized'>('Residential');
 
   // IntersectionObserver to sync active nav link with scroll position
@@ -72,7 +70,6 @@ export default function App() {
         activeSection={activeSection}
         onNavigate={scrollToSection}
         onOpenEstimate={() => scrollToSection('estimate')}
-        onOpenContact={() => setContactOpen(true)}
       />
 
       {/* Main Page Sections */}
@@ -106,7 +103,6 @@ export default function App() {
 
       {/* Footer */}
       <Footer
-        onOpenContact={() => setContactOpen(true)}
         onOpenEstimate={() => scrollToSection('estimate')}
       />
 
@@ -114,8 +110,6 @@ export default function App() {
       <BottomMobileNav
         activeSection={activeSection}
         onNavigate={scrollToSection}
-        onOpenEstimate={() => scrollToSection('estimate')}
-        onOpenContact={() => setContactOpen(true)}
       />
 
       {/* Modals & Inspection Drawers */}
@@ -125,10 +119,6 @@ export default function App() {
         onRequestQuote={handleRequestEstimateForProject}
       />
 
-      <ContactDrawer
-        isOpen={contactOpen}
-        onClose={() => setContactOpen(false)}
-      />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Project, ProjectCategory } from '../types';
-import { loadProjects, getInitialProjects, getDynamicCategories } from '../services/projectsService';
-import { ArrowRight, Sparkles, Filter, Layers, Maximize2, MapPin, Calendar, Compass, RefreshCw } from 'lucide-react';
+import { Project } from '../types';
+import { loadProjects, getInitialProjects } from '../services/projectsService';
+import { ArrowRight, Sparkles, Maximize2, MapPin } from 'lucide-react';
 
 interface FeaturedProjectsSectionProps {
   onSelectProject: (project: Project) => void;
@@ -16,6 +16,25 @@ export const FeaturedProjectsSection: React.FC<FeaturedProjectsSectionProps> = (
   const [activeCategory, setActiveCategory] = useState<string>('ALL');
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  const projectCategories = [
+    { id: 'ALL', label: 'All Projects' },
+    { id: 'RESIDENTIAL', label: 'Residential' },
+    { id: 'COMMERCIAL', label: 'Commercial' },
+    { id: 'INTERIOR_FITOUT', label: 'Interior Fitout' },
+    { id: 'LAND_DEVELOPMENT', label: 'Land Development' }
+  ];
+
+  const matchesCategory = (project: Project, category: string) => {
+    const projectCategory = (project.category || '').toUpperCase();
+    if (category === 'INTERIOR_FITOUT') {
+      return ['INTERIOR', 'INTERIOR_FITOUT', 'ARCHITECTURE', 'SPECIALIZED'].includes(projectCategory);
+    }
+    if (category === 'LAND_DEVELOPMENT') {
+      return ['LAND', 'LAND_DEVELOPMENT', 'LAND DEVELOPMENT'].includes(projectCategory);
+    }
+    return projectCategory === category;
+  };
+
   // Dynamic fetch from /data/projects.json
   useEffect(() => {
     let isMounted = true;
@@ -29,11 +48,9 @@ export const FeaturedProjectsSection: React.FC<FeaturedProjectsSectionProps> = (
     };
   }, []);
 
-  const dynamicCategories = getDynamicCategories(projectsList);
-
   const filteredProjects = activeCategory === 'ALL'
     ? projectsList
-    : projectsList.filter((p) => (p.category || '').toUpperCase() === activeCategory.toUpperCase());
+    : projectsList.filter((project) => matchesCategory(project, activeCategory));
 
   return (
     <section id="projects" className="py-24 px-5 sm:px-8 md:px-16 bg-[#fdf8f8]">
@@ -43,7 +60,7 @@ export const FeaturedProjectsSection: React.FC<FeaturedProjectsSectionProps> = (
           <div>
             <div className="flex items-center gap-2 mb-2 text-[#ff5722] text-xs uppercase font-semibold tracking-widest font-['Inter',sans-serif]">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Selected Portfolio</span>
+              <span>Selected Projects</span>
             </div>
             <h2 className="font-['Montserrat',sans-serif] text-2xl sm:text-3xl md:text-4xl font-bold text-[#1c1b1b] mb-3">
               Featured Work
@@ -53,7 +70,7 @@ export const FeaturedProjectsSection: React.FC<FeaturedProjectsSectionProps> = (
 
           {/* Dynamic Category Filter Pills */}
           <div className="flex flex-wrap items-center gap-2">
-            {dynamicCategories.map((cat) => (
+            {projectCategories.map((cat) => (
               <button
                 key={cat.id}
                 type="button"
@@ -68,14 +85,6 @@ export const FeaturedProjectsSection: React.FC<FeaturedProjectsSectionProps> = (
               </button>
             ))}
 
-            <button
-              type="button"
-              onClick={() => setActiveCategory('ALL')}
-              className="hidden md:flex font-['Inter',sans-serif] text-xs font-semibold uppercase tracking-widest text-[#1c1b1b] items-center gap-2 hover:text-[#ff5722] transition-colors ml-4 cursor-pointer"
-            >
-              <span>ALL ({projectsList.length})</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
           </div>
         </div>
 

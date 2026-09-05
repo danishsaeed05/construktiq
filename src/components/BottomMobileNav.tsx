@@ -1,25 +1,22 @@
 import React from 'react';
-import { LayoutGrid, Layers, Mail, Calculator } from 'lucide-react';
+import { Calculator, LayoutGrid, Layers } from 'lucide-react';
 
 interface BottomMobileNavProps {
   activeSection: string;
   onNavigate: (sectionId: string) => void;
-  onOpenEstimate: () => void;
-  onOpenContact: () => void;
+  onOpenEstimate?: () => void;
+  onOpenContact?: () => void;
 }
 
 export const BottomMobileNav: React.FC<BottomMobileNavProps> = ({
   activeSection,
-  onNavigate,
-  onOpenEstimate,
-  onOpenContact
+  onNavigate
 }) => {
   const items = [
-    { id: 'about', label: 'About', icon: Layers },
-    { id: 'capabilities', label: 'Capabilities', icon: Layers },
-    { id: 'projects', label: 'Portfolio', icon: LayoutGrid },
-    { id: 'estimate', label: 'Estimate', icon: Calculator },
-    { id: 'contact', label: 'Contact', icon: Mail, isAction: true },
+    { id: 'about', label: 'About Us', icon: Layers },
+    { id: 'capabilities', label: 'Services', icon: Layers },
+    { id: 'projects', label: 'Projects', icon: LayoutGrid },
+    { id: 'estimate', label: 'Request Estimate', icon: Calculator }
   ];
 
   return (
@@ -32,13 +29,7 @@ export const BottomMobileNav: React.FC<BottomMobileNavProps> = ({
           <button
             key={item.id}
             type="button"
-            onClick={() => {
-              if (item.id === 'contact') {
-                onOpenContact();
-              } else {
-                onNavigate(item.id);
-              }
-            }}
+            onClick={() => onNavigate(item.id)}
             className={`flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all duration-200 cursor-pointer ${
               isActive
                 ? 'text-[#ff5722] bg-[#ffdbd1]/60 font-semibold shadow-xs'

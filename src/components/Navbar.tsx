@@ -8,14 +8,12 @@ interface NavbarProps {
   activeSection: string;
   onNavigate: (sectionId: string) => void;
   onOpenEstimate: () => void;
-  onOpenContact: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   activeSection,
   onNavigate,
-  onOpenEstimate,
-  onOpenContact
+  onOpenEstimate
 }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,10 +27,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   }, []);
 
   const navLinks = [
-    { id: 'about', label: 'About' },
-    { id: 'capabilities', label: 'Scope' },
-    { id: 'projects', label: 'Portfolio' },
-    { id: 'estimate', label: 'Estimate' },
+    { id: 'about', label: 'About Us' },
+    { id: 'capabilities', label: 'Services' },
+    { id: 'projects', label: 'Projects' },
   ];
 
   const handleLinkClick = (id: string) => {
@@ -99,7 +96,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={onOpenEstimate}
             className="font-['Inter',sans-serif] text-xs font-semibold uppercase tracking-wider bg-[#1c1b1b] text-white px-5 py-2.5 rounded-sm glowing-btn cursor-pointer"
           >
-            ESTIMATE
+            REQUEST ESTIMATE
           </button>
 
           {/* Mobile Hamburger Button */}
@@ -141,17 +138,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 }}
                 className="w-full bg-[#1c1b1b] text-white py-3 rounded-sm font-semibold text-xs uppercase tracking-widest glowing-btn text-center"
               >
-                Launch Estimate Hub
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenContact();
-                }}
-                className="w-full border border-[#1c1b1b]/30 text-[#1c1b1b] py-2.5 rounded-sm font-semibold text-xs uppercase tracking-widest text-center hover:border-[#ff5722] hover:text-[#ff5722]"
-              >
-                Direct Inquiries
+                Request Estimate
               </button>
             </div>
           </nav>

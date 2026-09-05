@@ -5,11 +5,10 @@ import { Sparkles, ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
 const baseUrl = import.meta.env.BASE_URL || '/';
 
 interface FooterProps {
-  onOpenContact: () => void;
   onOpenEstimate: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenContact, onOpenEstimate }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenEstimate }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -34,7 +33,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, onOpenEstimate })
           </div>
           <p className="font-['Inter',sans-serif] text-xs sm:text-sm text-[#444748] leading-relaxed mb-4">
             © {new Date().getFullYear()} CONSTRUKTIQ.<br />
-            ARCHITECTURAL PRECISION &amp; INTELLIGENT FABRICATION.
+            GENERAL CONTRACTING, PROJECT MANAGEMENT &amp; LAND DEVELOPMENT.
           </p>
           <div className="text-[11px] text-[#858383]">
             Licensed General Contractor &amp; Structural Engineering Practice #CQ-94107
@@ -85,8 +84,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, onOpenEstimate })
           <p className="font-['Inter',sans-serif] text-xs sm:text-sm text-[#444748] space-y-1 leading-relaxed">
             {BRAND_CONFIG.address.line1}<br />
             {BRAND_CONFIG.address.line2}<br />
-            {BRAND_CONFIG.address.district}<br />
-            {BRAND_CONFIG.address.city}
+            {BRAND_CONFIG.address.district}
+            {BRAND_CONFIG.address.city && <><br />{BRAND_CONFIG.address.city}</>}
           </p>
         </div>
 
@@ -98,17 +97,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, onOpenEstimate })
           <div className="space-y-3">
             <button
               type="button"
-              onClick={onOpenContact}
-              className="text-xs sm:text-sm text-[#444748] hover:text-[#ff5722] underline decoration-1 underline-offset-4 transition-colors cursor-pointer block text-left"
-            >
-              Consultation &amp; RFI Desk
-            </button>
-            <button
-              type="button"
               onClick={onOpenEstimate}
               className="text-xs font-semibold uppercase tracking-wider text-[#ff5722] hover:underline block text-left cursor-pointer"
             >
-              Launch Estimate Calculator →
+              Request Estimate →
             </button>
             <div className="pt-2">
               <button

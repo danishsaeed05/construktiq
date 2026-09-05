@@ -34,13 +34,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         {/* Sub-label */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/15 mb-5 text-[#ff5722] text-xs font-semibold uppercase tracking-widest shadow-lg">
           <Sparkles className="w-3.5 h-3.5 text-[#ff5722]" />
-          <span>Architectural Engineering & Fabrication</span>
+          <span>General Contractor and Land Development Consultant</span>
         </div>
 
         {/* Headline */}
         <h1 className="font-['Montserrat',sans-serif] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-5 leading-[1.12] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-          Precision Construction &amp;
-          <span className="text-[#ff5722]"> Intelligent Design</span>
+          Coordinated Delivery &amp;
+          <span className="text-[#ff5722]"> Development Expertise</span>
         </h1>
 
         {/* Subtitle */}
@@ -62,7 +62,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             onClick={onGetEstimate}
             className="bg-black/60 hover:bg-black/80 backdrop-blur-md border border-white/30 text-white font-['Inter',sans-serif] text-xs uppercase tracking-widest font-semibold px-9 py-4 rounded-sm hover:border-[#ff5722] hover:text-[#ff5722] transition-all w-full sm:w-auto text-center cursor-pointer shadow-md"
           >
-            GET AN ESTIMATE
+            REQUEST ESTIMATE
           </button>
         </div>
 

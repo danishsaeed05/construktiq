@@ -5,17 +5,17 @@ const baseUrl = import.meta.env.BASE_URL || '/';
 
 export const BRAND_CONFIG = {
   name: 'CONSTRUKTIQ',
-  tagline: 'Precision Construction & Intelligent Design',
-  subtitle: 'Constructing the Future of Space formed with Purpose',
+  tagline: 'Coordinated Delivery & Development Expertise',
+  subtitle: 'General contracting, project management, and land development delivered with clarity from first plan to final handover.',
   logoUrl: `${baseUrl}images/gemini-svg.svg`,
   markLogoUrl: `${baseUrl}images/logo_only_without_text.svg`,
   phone: '+1 (800) 492-8821',
   email: 'inquiries@construktiq.build',
   address: {
-    line1: '100 Innovation Drive',
-    line2: 'Suite 400',
-    district: 'Architecture District',
-    city: 'San Francisco, CA 94107'
+    line1: '4089 Hillsborough Cres',
+    line2: 'Oakville, ON L6H 3P9',
+    district: 'Canada',
+    city: ''
   }
 };
 

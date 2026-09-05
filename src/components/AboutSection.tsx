@@ -4,18 +4,18 @@ import { ArrowRight, Building2, HardHat, Map, Sparkles } from 'lucide-react';
 export const AboutSection: React.FC = () => {
   const focusAreas = [
     {
-      title: 'Low-Rise & High-Rise',
-      description: 'Execution across mixed-use, institutional, and multi-story environments with disciplined site coordination and quality oversight.',
+      title: 'Low-Rise & Commercial',
+      description: 'General contracting for low-rise buildings and commercial spaces, with dependable site coordination, quality control, and delivery oversight.',
       icon: Building2
     },
     {
-      title: 'Commercial & Land Development',
-      description: 'From greenfield acquisition and site strategy to infrastructure, approvals, and final delivery.',
+      title: 'Greenfield Land Developments',
+      description: 'Guidance from early site strategy and approvals through servicing, infrastructure, and the delivery of build-ready land.',
       icon: Map
     },
     {
-      title: 'Project Lifecycle Leadership',
-      description: 'Hands-on involvement from concept and preconstruction through construction management and turnover.',
+      title: 'Project Management Services',
+      description: 'Clear coordination across owners, consultants, contractors, and authorities to keep scope, schedule, and decisions moving forward.',
       icon: HardHat
     }
   ];
@@ -26,7 +26,7 @@ export const AboutSection: React.FC = () => {
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-2 text-[#ff5722] text-xs uppercase font-semibold tracking-widest font-['Inter',sans-serif]">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>About</span>
+            <span>About Us</span>
           </div>
           <h2 className="font-['Montserrat',sans-serif] text-2xl sm:text-3xl md:text-4xl font-bold text-[#1c1b1b] mb-3">
             Builder. Developer. Delivery Partner.

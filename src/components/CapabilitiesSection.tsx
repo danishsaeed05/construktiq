@@ -45,7 +45,7 @@ export const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = ({
             <span>Core Disciplines</span>
           </div>
           <h2 className="font-['Montserrat',sans-serif] text-2xl sm:text-3xl md:text-4xl font-bold text-[#1c1b1b] mb-3">
-            Specialization
+            Services
           </h2>
           <div className="w-12 h-1 bg-[#ff5722] rounded-full" />
         </div>
