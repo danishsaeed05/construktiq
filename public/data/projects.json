@@ -18,10 +18,11 @@
     "budgetTier": "$2.5M - $4.0M",
     "status": "Completed",
     "stages": [
-      "Planning & Design",
-      "Permits & Approvals",
-      "Construction",
-      "Inspections & Handover"
+      "OPA/ZBA (Official Plan & Zoning By-Law Amendments)",
+      "SUBDIVISION (Draft Plan & Registration)",
+      "SITE SERVICING & INFRASTRUCTURE",
+      "SPA & BUILDING PERMITS (Site Plan Approval)",
+      "CONSTRUCTION"
     ]
   },
   {
@@ -43,10 +44,11 @@
     "budgetTier": "$5.0M+",
     "status": "Completed",
     "stages": [
-      "Site & Design",
-      "Engineering & Approvals",
-      "Construction",
-      "Finishes & Handover"
+      "OPA/ZBA (Official Plan & Zoning By-Law Amendments)",
+      "SUBDIVISION (Draft Plan & Registration)",
+      "SITE SERVICING & INFRASTRUCTURE",
+      "SPA & BUILDING PERMITS (Site Plan Approval)",
+      "CONSTRUCTION"
     ]
   },
   {
@@ -67,10 +69,11 @@
     "budgetTier": "$3.0M - $4.5M",
     "status": "Completed",
     "stages": [
-      "Feasibility & Design",
-      "Approvals & Coordination",
-      "Construction",
-      "Interior Fitout & Opening"
+      "OPA/ZBA (Official Plan & Zoning By-Law Amendments)",
+      "SUBDIVISION (Draft Plan & Registration)",
+      "SITE SERVICING & INFRASTRUCTURE",
+      "SPA & BUILDING PERMITS (Site Plan Approval)",
+      "CONSTRUCTION"
     ]
   },
   {
@@ -92,10 +95,11 @@
     "status": "Under Construction",
     "currentStage": 2,
     "stages": [
-      "Concept & Engineering",
-      "Fabrication",
-      "Installation",
-      "Commissioning"
+      "OPA/ZBA (Official Plan & Zoning By-Law Amendments)",
+      "SUBDIVISION (Draft Plan & Registration)",
+      "SITE SERVICING & INFRASTRUCTURE",
+      "SPA & BUILDING PERMITS (Site Plan Approval)",
+      "CONSTRUCTION"
     ]
   }
 ]
