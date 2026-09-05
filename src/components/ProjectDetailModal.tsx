@@ -104,11 +104,14 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             </div>
 
             <div className="relative px-2">
-              <div className="absolute left-2 right-2 top-3 h-1 rounded-full bg-[#d8d4d2]" />
-              <div
-                className="absolute left-2 top-3 h-1 rounded-full bg-[#ff5722] transition-all duration-500"
-                style={{ width: `${project.stages.length > 1 ? (currentStage / (project.stages.length - 1)) * 100 : 100}%` }}
-              />
+              <div className="absolute left-2 right-2 top-3 h-1 overflow-hidden rounded-full bg-[#d8d4d2]">
+                <div
+                  className="absolute inset-y-0 left-0 overflow-hidden rounded-full bg-[#ff5722] transition-all duration-500"
+                  style={{ width: `${project.stages.length > 1 ? (currentStage / (project.stages.length - 1)) * 100 : 100}%` }}
+                >
+                  <span className="project-progress-wave" aria-hidden="true" />
+                </div>
+              </div>
               <div className="relative grid gap-3" style={{ gridTemplateColumns: `repeat(${project.stages.length}, minmax(0, 1fr))` }}>
                 {project.stages.map((stage, index) => {
                   const isStageComplete = index <= currentStage;
