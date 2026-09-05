@@ -15,19 +15,14 @@
     "leadArchitect": "E. Vance, AIA",
     "tagline": "Ultra-refined minimalist alpine retreat with continuous Calacatta marble waterfall surfaces.",
     "description": "The Apex Residence balances raw architectural honesty with delicate modern domesticity. Highlighting a bespoke bookmatched Calacatta marble island, fluted white oak millwork, and full-height thermal architectural glazing facing alpine panoramas.",
-    "materials": [
-      "Calacatta Viola Marble",
-      "White Rift Oak",
-      "Brushed Matte Brass",
-      "Recessed Trimless LED"
-    ],
-    "keyFeatures": [
-      "Monolithic island with hidden integrated induction",
-      "Concealed automated butler pantry",
-      "Passivhaus certified thermal envelope"
-    ],
     "budgetTier": "$2.5M - $4.0M",
-    "status": "Completed"
+    "status": "Completed",
+    "stages": [
+      "Planning & Design",
+      "Permits & Approvals",
+      "Construction",
+      "Inspections & Handover"
+    ]
   },
   {
     "id": "desert-concrete-pavilion",
@@ -45,19 +40,14 @@
     "leadArchitect": "K. Thorne & Partners",
     "tagline": "Board-formed cantilevered architectural concrete meeting zero-edge reflecting waters.",
     "description": "Forged directly into desert bedrock, the Desert Concrete Pavilion exemplifies our heavy concrete engineering capability. Mass cast-in-place cantilevered roof planes shade floor-to-ceiling ultra-clear glass, creating seamless indoor-outdoor desert continuity.",
-    "materials": [
-      "Board-Formed Architectural Concrete",
-      "Structural Blackened Steel",
-      "Low-E Acoustic Glazing",
-      "Basalt Stone Pavers"
-    ],
-    "keyFeatures": [
-      "14-foot continuous cantilever without structural columns",
-      "Mirror-edge passive cooling water basin",
-      "Subterranean geothermal climate moderation"
-    ],
     "budgetTier": "$5.0M+",
-    "status": "Completed"
+    "status": "Completed",
+    "stages": [
+      "Site & Design",
+      "Engineering & Approvals",
+      "Construction",
+      "Finishes & Handover"
+    ]
   },
   {
     "id": "the-foundry-hub",
@@ -74,19 +64,14 @@
     "leadArchitect": "CONSTRUKTIQ Studio",
     "tagline": "Adaptive reuse of a historic 19th-century brick foundry into a multi-tier culinary & social venue.",
     "description": "Transforming industrial masonry heritage into an avant-garde dining and hospitality experience. We preserved exposed brickwork and structural timber trusses while weaving in custom brass gantry bar systems, polished concrete floors, and smart acoustic insulation.",
-    "materials": [
-      "Historic Reclaimed Brick",
-      "Architectural Brass Gantry",
-      "Polished Concrete Slab",
-      "Saddle Leather Upholstery"
-    ],
-    "keyFeatures": [
-      "Multi-tier suspended brass liquor display with backlighting",
-      "Custom acoustic ceiling baffling integrated into joists",
-      "120-seat high-density dining optimization"
-    ],
     "budgetTier": "$3.0M - $4.5M",
-    "status": "Completed"
+    "status": "Completed",
+    "stages": [
+      "Feasibility & Design",
+      "Approvals & Coordination",
+      "Construction",
+      "Interior Fitout & Opening"
+    ]
   },
   {
     "id": "lumina-glass-atrium",
@@ -103,18 +88,14 @@
     "leadArchitect": "M. Sterling, RIBA",
     "tagline": "Curved structural diagrid glazing with integrated solar harvesting and automated microclimate.",
     "description": "A state-of-the-art corporate innovation atrium utilizing lightweight titanium-steel diagrid trusses and electrochromic triple-glazed panels that adjust tint dynamically with solar intensity.",
-    "materials": [
-      "Titanium Diagrid Truss",
-      "Electrochromic Dynamic Glass",
-      "Terrazzo Composite Flooring",
-      "Acoustic Moss Walls"
-    ],
-    "keyFeatures": [
-      "Self-shading electrochromic intelligent envelope",
-      "Seismic Grade IV base-isolation foundation",
-      "Rainwater catchment supplying botanical interior"
-    ],
     "budgetTier": "$7.5M+",
-    "status": "Under Construction"
+    "status": "Under Construction",
+    "currentStage": 2,
+    "stages": [
+      "Concept & Engineering",
+      "Fabrication",
+      "Installation",
+      "Commissioning"
+    ]
   }
 ]

@@ -13,8 +13,8 @@ export interface Project {
   leadArchitect?: string;
   tagline: string;
   description: string;
-  materials?: string[];
-  keyFeatures?: string[];
+  stages: string[];
+  currentStage?: number;
   budgetTier?: string;
   status?: 'Completed' | 'Under Construction' | 'Design Phase' | string;
 }

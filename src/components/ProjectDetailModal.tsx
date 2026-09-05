@@ -1,6 +1,6 @@
 import React from 'react';
 import { Project } from '../types';
-import { X, MapPin, Calendar, Layers, ShieldCheck, ArrowRight, CheckCircle2, Ruler, Building } from 'lucide-react';
+import { X, MapPin, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 interface ProjectDetailModalProps {
   project: Project | null;
@@ -14,6 +14,11 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
   onRequestQuote
 }) => {
   if (!project) return null;
+
+  const isCompleted = project.status?.toLowerCase() === 'completed';
+  const currentStage = isCompleted
+    ? project.stages.length - 1
+    : Math.min(Math.max(project.currentStage ?? 0, 0), project.stages.length - 1);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/75 backdrop-blur-md animate-in fade-in duration-250">
@@ -87,41 +92,40 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             </div>
           </div>
 
-          {/* Key Engineering Features */}
-          {project.keyFeatures && project.keyFeatures.length > 0 && (
-            <div>
-              <h4 className="font-['Montserrat',sans-serif] text-xs font-bold uppercase tracking-wider text-[#1c1b1b] mb-3">
-                Key Engineering Features
+          {/* Project Development Progress */}
+          <div>
+            <div className="flex items-center justify-between gap-4 mb-4">
+              <h4 className="font-['Montserrat',sans-serif] text-xs font-bold uppercase tracking-wider text-[#1c1b1b]">
+                Project Progress
               </h4>
-              <div className="space-y-2">
-                {project.keyFeatures.map((feat, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#1c1b1b]">
-                    <CheckCircle2 className="w-4 h-4 text-[#ff5722] shrink-0 mt-0.5" />
-                    <span>{feat}</span>
-                  </div>
-                ))}
-              </div>
+              <span className="text-xs font-semibold text-[#ff5722]">
+                {isCompleted ? 'Complete' : `Stage ${currentStage + 1} of ${project.stages.length}`}
+              </span>
             </div>
-          )}
 
-          {/* Materials Integrated */}
-          {project.materials && project.materials.length > 0 && (
-            <div>
-              <h4 className="font-['Montserrat',sans-serif] text-xs font-bold uppercase tracking-wider text-[#1c1b1b] mb-3">
-                Materials Specified
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {project.materials.map((mat, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1.5 rounded-sm bg-[#f1edec] border border-[#747878]/20 text-xs font-medium text-[#1c1b1b]"
-                  >
-                    {mat}
-                  </span>
-                ))}
+            <div className="relative px-2">
+              <div className="absolute left-2 right-2 top-3 h-1 rounded-full bg-[#d8d4d2]" />
+              <div
+                className="absolute left-2 top-3 h-1 rounded-full bg-[#ff5722] transition-all duration-500"
+                style={{ width: `${project.stages.length > 1 ? (currentStage / (project.stages.length - 1)) * 100 : 100}%` }}
+              />
+              <div className="relative grid gap-3" style={{ gridTemplateColumns: `repeat(${project.stages.length}, minmax(0, 1fr))` }}>
+                {project.stages.map((stage, index) => {
+                  const isStageComplete = index <= currentStage;
+                  return (
+                    <div key={stage} className="min-w-0 text-center">
+                      <div className={`mx-auto mb-2 h-7 w-7 rounded-full border-4 border-[#fdf8f8] flex items-center justify-center ${isStageComplete ? 'bg-[#ff5722] text-white' : 'bg-[#d8d4d2] text-[#747878]'}`}>
+                        {isStageComplete && <CheckCircle2 className="h-3.5 w-3.5" />}
+                      </div>
+                      <span className={`block text-[10px] leading-tight break-words ${isStageComplete ? 'font-semibold text-[#1c1b1b]' : 'text-[#747878]'}`}>
+                        {stage}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
-          )}
+          </div>
 
           {/* Additional Gallery Images */}
           {project.additionalImages && project.additionalImages.length > 0 && (
